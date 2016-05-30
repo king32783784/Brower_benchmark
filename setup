@@ -1,0 +1,5 @@
+#!/bin/bash
+pip install --upgrade pip
+pip install selenium
+tar xf chromedriver.tar.bz2
+cp chromedriver /usr/bin/ -rf
