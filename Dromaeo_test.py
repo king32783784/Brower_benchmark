@@ -2,7 +2,7 @@
 from selenium import webdriver
 import time
 
-def check_xpath(browser='dromaeotest',checkxpath="//*[@id='tests']/li[3]/b/a"):
+def check_xpath(browser='dromaeotest', checkxpath="//*[@id='tests']/li[3]/b/a"):
     '''Check the xpath ready or not'''
     while True:
         try:
@@ -12,17 +12,25 @@ def check_xpath(browser='dromaeotest',checkxpath="//*[@id='tests']/li[3]/b/a"):
             pass
             print "not ok"
 
-def check_id(browser='dromaeotest',checkid="pause"):
-    '''Check the ID ready or not'''
+def check_idon(browser='dromaeotest', checkid="pause"):
+    '''Check the ID on or off'''
     while True:
         try:
             drop=browser.find_element_by_id("%s" %checkid)
             break
         except:
-            pass
-            print "not ok"
+            time.sleep(1)
 
-class Dromaeo_test():
+def check_idoff(browser='dromaeotest', checkid='left'):
+    while True:
+        try:
+            drop=browser.find_element_by_id("%s" %checkid)
+            time.sleep(1)
+        except:
+            break
+
+
+class Dromaeo_test(object):
     '''Dromaeo Test'''
     def __init__(self,name):
         self.name=name
@@ -34,21 +42,16 @@ class Dromaeo_test():
         time.sleep(30)
         check_xpath(browser=dromaeotest,checkxpath=testxpath)
         dromaeotest.find_element_by_xpath("%s" %testxpath).click()
-        time.sleep(60)
-        check_id(browser=dromaeotest,checkid="pause")
-        print "ok"
+        time.sleep(30)
+        check_idon(browser=dromaeotest,checkid="pause")
         dromaeotest.find_element_by_id("pause").click()
-        check_id(browser=dromaeotest,checkid="timebar")
-        print "oK"
+        check_idoff(browser=dromaeotest,checkid="left")
         result=dromaeotest.find_element_by_xpath("//*[@id='timebar']/span/strong").text
         print result
-       # csstest.quit()
-       # print csstest_result
 
-SunSpider_JS_xpath="//*[@id='tests']/li[5]/a[1]"
-Run_SunSpider_JS_xpath="pause"
-Dromaeo_JS_xpath="//*[@id='tests']/li[3]/b/a"
-V8_JS_xpath="//*[@id='tests']/li[6]/a[1]"
-        
+# test type
+# DOM Core test
+Domtest_xpath="//*[@id=\"tests\"]/li[8]/a"
+
 chrome=Dromaeo_test("chrouim")
-chrome.do_dromaeotest(dromaeotest=webdriver.Chrome(),testxpath=SunSpider_JS_xpath)
+chrome.do_dromaeotest(dromaeotest=webdriver.Chrome(),testxpath=Domtest_xpath)
