@@ -52,7 +52,6 @@ class Do_type1test(object):
 
 class Do_type2test(Do_type1test):
     def do_test(self, test):
-        time.sleep(3)
         test.get(self.cmds['url'])
         test.find_element_by_id(self.cmds['click']).click()
         time.sleep(20)
@@ -137,5 +136,5 @@ def firefox():
         print "Execution failed:%s" %e
     
 if __name__ ==  "__main__":
- #   chrome()
+    chrome()
     firefox()
