@@ -75,15 +75,14 @@ def firefox():
         if retcode > 0:
             pass
         else:
-      #      csstest = runtest.Do_type2test(css4)
-      #      cssresult = csstest.do_test(webdriver.Firefox())
-      #      logger.info("css4 result is %s" % result(cssresult)[3])
-      #      acidtest = runtest.Do_type1test(acid3)
-      #      acidresult = acidtest.do_test(webdriver.Firefox())
-      #      logger.info("acid3 result is %s" % acidresult)
+            csstest = runtest.Do_type2test(css4)
+            cssresult = csstest.do_test(webdriver.Firefox())
+            logger.info("css4 result is %s" % result(cssresult)[3])
+            acidtest = runtest.Do_type1test(acid3)
+            acidresult = acidtest.do_test(webdriver.Firefox())
+            logger.info("acid3 result is %s" % acidresult)
             vtest = runtest.Do_type1test(v8test)
             vresult = vtest.do_test(webdriver.Firefox())
-            print vresult
             logger.info("V8test result is %s" % vresult)
             octanetest = runtest.Do_type1test(octane)
             octaneresult = octanetest.do_test(webdriver.Firefox())
@@ -97,5 +96,5 @@ def firefox():
     except OSError as e:
         logger.ERROR("Execution failed:%s" % e)
 if __name__ == "__main__":
- #   chrome()
+    chrome()
     firefox()
