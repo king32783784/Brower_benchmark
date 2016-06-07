@@ -1,0 +1,39 @@
+2016-06-07 15:49:45,306 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 15:51:26,364 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 15:55:46,858 - browser-test - INFO - css4 result is 84
+2016-06-07 15:55:46,858 - browser-test.runtest.Do_type1test - INFO - acid3 test startting 
+2016-06-07 15:56:49,778 - browser-test - INFO - acid3 result is 100/100
+2016-06-07 15:56:49,778 - browser-test.runtest.Do_type1test - INFO - v8test test startting 
+2016-06-07 15:57:52,247 - browser-test - INFO - V8test result is 总成绩: 20915
+2016-06-07 15:57:52,248 - browser-test.runtest.Do_type1test - INFO - octane test startting 
+2016-06-07 15:59:00,309 - browser-test - INFO - octane result is 您的浏览器得分: 21994
+2016-06-07 15:59:00,309 - browser-test.runtest.Do_type3test - INFO - html5 test startting 
+2016-06-07 16:00:09,694 - browser-test - INFO - html5test result is 521
+2016-06-07 16:00:09,694 - browser-test.runtest.Do_type4test - INFO - dromaeo test startting 
+2016-06-07 16:04:32,517 - browser-test - INFO - dromaeotest result is 1665.65
+2016-06-07 16:04:32,523 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:05:03,165 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:06:01,996 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:20:44,343 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:23:13,032 - browser-test - INFO - css4 result is 82
+2016-06-07 16:23:13,032 - browser-test.runtest.Do_type1test - INFO - acid3 test startting 
+2016-06-07 16:24:17,791 - browser-test - INFO - acid3 result is 99/100
+2016-06-07 16:24:17,791 - browser-test.runtest.Do_type1test - INFO - v8test test startting 
+2016-06-07 16:25:41,093 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:27:16,279 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:28:07,817 - browser-test - INFO - css4 result is 82
+2016-06-07 16:28:07,817 - browser-test.runtest.Do_type1test - INFO - acid3 test startting 
+2016-06-07 16:29:18,621 - browser-test - INFO - acid3 result is 99/100
+2016-06-07 16:29:18,621 - browser-test.runtest.Do_type1test - INFO - v8test test startting 
+2016-06-07 16:30:22,759 - browser-test - INFO - V8test result is 总成绩: 20362
+2016-06-07 16:30:22,760 - browser-test.runtest.Do_type1test - INFO - octane test startting 
+2016-06-07 16:31:35,851 - browser-test - INFO - octane result is 您的浏览器得分: 20595
+2016-06-07 16:31:35,852 - browser-test.runtest.Do_type3test - INFO - html5 test startting 
+2016-06-07 16:32:58,951 - browser-test - INFO - html5test result is 466
+2016-06-07 16:32:58,951 - browser-test.runtest.Do_type4test - INFO - dromaeo test startting 
+2016-06-07 16:34:51,670 - browser-test.runtest.Do_type2test - INFO - css4 test startting 
+2016-06-07 16:37:00,530 - browser-test.runtest.Do_type1test - INFO - v8test test startting 
+2016-06-07 16:38:04,798 - browser-test - INFO - V8test result is 总成绩: 19902
+2016-06-07 16:38:04,798 - browser-test.runtest.Do_type1test - INFO - octane test startting 
+2016-06-07 16:39:14,844 - browser-test - INFO - octane result is 您的浏览器得分: 19178
+2016-06-07 16:39:14,844 - browser-test.runtest.Do_type3test - INFO - html5 test startting 

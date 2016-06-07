@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding = utf-8
-
 import time
 import logging
 from selenium import webdriver
@@ -55,7 +52,7 @@ class Do_type1test(object):
                 exit()
         result = test.find_element_by_id(self.cmds['result']).text
         test.quit()
-        self.logger.info("test result is %s" % result)
+        return result
 
 
 class Do_type2test(object):
@@ -70,7 +67,7 @@ class Do_type2test(object):
         time.sleep(20)
         result = test.find_element_by_id(self.cmds['result']).text
         test.quit()
-        self.logger.info("test result is %s" % result)
+        return result
 
 
 class Do_type3test(object):
@@ -84,7 +81,7 @@ class Do_type3test(object):
         time.sleep(60)
         result = test.find_element_by_xpath(self.cmds['result']).text
         test.quit()
-        self.logger.info("test result is %s" % result)
+        return result
 
 
 class Do_type4test(object):
@@ -104,4 +101,4 @@ class Do_type4test(object):
         check_idoff(testname=test, checkid=self.cmds['resultid'])
         result = test.find_element_by_xpath(self.cmds['result']).text
         test.quit()
-        self.logger.info("test result is %s" % result)
+        return result

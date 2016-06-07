@@ -1,5 +1,8 @@
+#!/bin/bash/env python
+#encoding = utf-8
 import logging
 import runtest
+import re
 from subprocess import call
 from selenium import webdriver
 
@@ -32,6 +35,10 @@ html5 = {'name': 'html5', 'url': 'http://html5test.com/', 'result': '//*[@id=\"s
 dromaeo = {'name': 'dromaeo', 'url': 'http://dromaeo.com/', 'result': '//*[@id=\'timebar\']/span/strong',
          'testxpath': '//*[@id=\"tests\"]/li[8]/a', 'runid': 'pause', 'resultid': 'left'}
 
+def result(Initialresults):
+    p = re.compile(r'\d+')
+    return p.findall(Initialresults)
+
 
 def chrome():
     try:
@@ -39,18 +46,25 @@ def chrome():
         if retcode > 0:
             pass
         else:
-            test = runtest.Do_type2test(css4)
-            test.do_test(webdriver.Chrome())
-            test = runtest.Do_type1test(acid3)
-            test.do_test(webdriver.Chrome())
-            test = runtest.Do_type1test(v8test)
-            test.do_test(webdriver.Chrome())
-            test = runtest.Do_type1test(octane)
-            test.do_test(webdriver.Chrome())
-            test = runtest.Do_type3test(html5)
-            test.do_test(webdriver.Chrome())
-            test = runtest.Do_type4test(dromaeo)
-            test.do_test(webdriver.Chrome())
+            csstest = runtest.Do_type2test(css4)
+            cssresult = csstest.do_test(webdriver.Chrome())
+            logger.info("css4 result is %s" % result(cssresult)[3])
+            acidtest = runtest.Do_type1test(acid3)
+            acidresult = acidtest.do_test(webdriver.Chrome())
+            logger.info("acid3 result is %s" % acidresult)
+            vtest = runtest.Do_type1test(v8test)
+            vresult = vtest.do_test(webdriver.Chrome())
+            logger.info("V8test result is %s" % vresult)
+            octanetest = runtest.Do_type1test(octane)
+            octaneresult = octanetest.do_test(webdriver.Chrome())
+            logger.info("octane result is %s" % octaneresult)
+            htmltest = runtest.Do_type3test(html5)
+            htmlresult = htmltest.do_test(webdriver.Chrome())
+            logger.info("html5test result is %s" % htmlresult)
+            dromaeotest = runtest.Do_type4test(dromaeo)
+            dromaeotestresult = dromaeotest.do_test(webdriver.Chrome())
+            logger.info("dromaeotest result is %s" % dromaeotestresult)
+
     except OSError as e:
         logger.ERROR("Execution failed:%s" % e)
 
@@ -61,20 +75,27 @@ def firefox():
         if retcode > 0:
             pass
         else:
-            test = runtest.Do_type2test(css4)
-            test.do_test(webdriver.Firefox())
-            test = runtest.Do_type1test(acid3)
-            test.do_test(webdriver.Firefox())
-            test = runtest.Do_type1test(v8test)
-            test.do_test(webdriver.Firefox())
-            test = runtest.Do_type1test(octane)
-            test.do_test(webdriver.Firefox())
-            test = runtest.Do_type3test(html5)
-            test.do_test(webdriver.Firefox())
-            test = runtest.Do_type4test(dromaeo)
-            test.do_test(webdriver.Firefox())
+      #      csstest = runtest.Do_type2test(css4)
+      #      cssresult = csstest.do_test(webdriver.Firefox())
+      #      logger.info("css4 result is %s" % result(cssresult)[3])
+      #      acidtest = runtest.Do_type1test(acid3)
+      #      acidresult = acidtest.do_test(webdriver.Firefox())
+      #      logger.info("acid3 result is %s" % acidresult)
+            vtest = runtest.Do_type1test(v8test)
+            vresult = vtest.do_test(webdriver.Firefox())
+            print vresult
+            logger.info("V8test result is %s" % vresult)
+            octanetest = runtest.Do_type1test(octane)
+            octaneresult = octanetest.do_test(webdriver.Firefox())
+            logger.info("octane result is %s" % octaneresult)
+            htmltest = runtest.Do_type3test(html5)
+            htmlresult = htmltest.do_test(webdriver.Firefox())
+            logger.info("html5test result is %s" % htmlresult)
+            dromaeotest = runtest.Do_type4test(dromaeo)
+            dromaeotestresult = dromaeotest.do_test(webdriver.Firefox())
+            logger.info("dromaeotest result is %s" % dromaeotestresult)
     except OSError as e:
         logger.ERROR("Execution failed:%s" % e)
 if __name__ == "__main__":
-    chrome()
+ #   chrome()
     firefox()
